@@ -2,9 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router';
 import { Layout } from 'antd';
 
-const {
-  Header, Footer, Sider, Content,
-} = Layout;
+const { Header, Footer, Content } = Layout;
 
 function App() {
   return (
