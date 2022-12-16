@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./_layout/layout"
-import Home from "./pages/home"
-import Card from "./pages/card"
+import Layout from "./_layout/layout";
+import Home from "./pages/home";
+import Card from "./pages/card";
 
 export default function App() {
   return (
@@ -19,6 +19,5 @@ export default function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
-
