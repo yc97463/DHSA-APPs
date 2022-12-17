@@ -2,7 +2,17 @@ import React from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { message, Space, Button } from 'antd';
 
-function Auth() {
+function Logout() {
+  let hasToken = localStorage.getItem('token') != null ? true : false;
+  if (hasToken) {
+    localStorage.removeItem('token');
+    window.location.reload();
+  } else {
+    message.success('登出成功');
+  }
+}
+
+function Login() {
   const [searchParams] = useSearchParams();
   localStorage.setItem(
     'redirect',
@@ -12,7 +22,6 @@ function Auth() {
     message.error('請先登入');
   }
   const is_gms = searchParams.get('gms') == null ? false : true;
-
   return (
     <div>
       <Space wrap>
@@ -23,6 +32,22 @@ function Auth() {
       </Space>
     </div>
   );
+}
+
+function Auth() {
+  const [searchParams] = useSearchParams();
+  const is_logout = searchParams.get('logout') == null ? false : true;
+
+  if (is_logout) {
+    return (
+      <div>
+        <Logout />
+        <Login />
+      </div>
+    );
+  } else {
+    return <Login />;
+  }
 }
 
 export default Auth;
