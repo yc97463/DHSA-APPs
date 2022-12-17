@@ -30,13 +30,11 @@ function Authing() {
   return <div>Authing...</div>;
 }
 
-function Guest() {
-  const loginInfo = fetch(
+async function Guest() {
+  const authInfo = await fetch(
     endpoint + '/auth/google?' + new URLSearchParams({ redirect: currentUrl })
-  )
-    .then((response) => response.json())
-    .then((response) => window.location.replace(response.url));
-  return;
+  ).then((response) => response.json());
+  return window.location.replace(authInfo.url);
 }
 
 function AuthGoogle() {
