@@ -44,7 +44,7 @@ function Authing() {
   );
 }
 
-function Guest() {
+function GetGoogleAuthUrl() {
   const authInfo = fetch(
     endpoint + '/auth/google?' + new URLSearchParams({ redirect: currentUrl })
   )
@@ -60,7 +60,7 @@ function AuthGoogle() {
   if (code) {
     return <Authing />;
   } else {
-    return <Guest />;
+    return <GetGoogleAuthUrl />;
   }
 }
 
