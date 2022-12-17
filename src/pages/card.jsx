@@ -1,5 +1,5 @@
-import React from "react";
-import { Card } from "antd";
+import React from 'react';
+import { Card } from 'antd';
 
 function SaCard() {
   return (
@@ -28,4 +28,15 @@ function SaCard() {
   );
 }
 
-export default SaCard;
+function checkStatus() {
+  if (localStorage.getItem('token')) {
+    return <SaCard />;
+  } else {
+    // <Navigate replace to="/auth?redirect=/card" />;
+    // <Redirect to="/auth?redirect=/card" />;
+    // return (window.location = '/auth?redirect=/card');
+    return window.location.replace('/auth?redirect=/card');
+  }
+}
+
+export default checkStatus;
