@@ -1,5 +1,7 @@
 import React from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { Spin } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
 
 // const params = new URLSearchParams(paramsString);
 // const code = params.get('code');
@@ -27,7 +29,19 @@ function Authing() {
   setTimeout(() => {
     window.location.replace(localStorage.getItem('redirect'));
   }, 2000);
-  return <div>Authing...</div>;
+  const antIcon = (
+    <LoadingOutlined
+      style={{
+        fontSize: 24,
+      }}
+      spin
+    />
+  );
+  return (
+    <div style={{ padding: 50 }}>
+      <Spin indicator={antIcon}>Authing...</Spin>
+    </div>
+  );
 }
 
 function Guest() {
