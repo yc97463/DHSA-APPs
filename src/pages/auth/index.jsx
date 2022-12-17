@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { message } from 'antd';
+import { message, Space, Button } from 'antd';
 
 function Auth() {
   const [searchParams] = useSearchParams();
@@ -11,7 +11,18 @@ function Auth() {
   if (localStorage.getItem('redirect') != '/') {
     message.error('請先登入');
   }
-  return <Link to="/auth/google">Login with Google</Link>;
+  const is_gms = searchParams.get('gms') == null ? false : true;
+
+  return (
+    <div>
+      <Space wrap>
+        <Link to="/auth/google">
+          <Button type="primary">Login with Google</Button>
+        </Link>
+        {is_gms ? '請使用 @gms.ndhu.edu.tw 結尾的帳號登入。' : ''}
+      </Space>
+    </div>
+  );
 }
 
 export default Auth;
