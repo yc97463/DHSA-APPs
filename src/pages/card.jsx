@@ -4,7 +4,7 @@ import { Card } from 'antd';
 function SaCard() {
   return (
     <div>
-      <h1>This is card.</h1>
+      <h1>This is a card.</h1>
       <Card
         title="Default size card"
         extra={<a href="#">More</a>}
@@ -35,7 +35,7 @@ function checkStatus() {
     // <Navigate replace to="/auth?redirect=/card" />;
     // <Redirect to="/auth?redirect=/card" />;
     // return (window.location = '/auth?redirect=/card');
-    return window.location.replace('/auth?redirect=/card');
+    return window.location.replace('/auth?gms&redirect=/card');
   }
 }
 
