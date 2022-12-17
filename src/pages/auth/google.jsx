@@ -3,8 +3,8 @@ import { useSearchParams } from 'react-router-dom';
 
 // const params = new URLSearchParams(paramsString);
 // const code = params.get('code');
-// const endpoint = 'https://api.dhsa.ndhu.edu.tw';
-const endpoint = 'http://localhost:8080';
+const endpoint = 'https://api.dhsa.ndhu.edu.tw';
+// const endpoint = 'http://localhost:8080';
 const currentUrl =
   (location.host == 'localhost:3000' ? 'http://' : 'https://') +
   location.host +
