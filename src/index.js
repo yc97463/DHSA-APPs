@@ -6,6 +6,7 @@ import Home from './pages/home';
 import Card from './pages/card';
 import Auth from './pages/auth';
 import AuthGoogle from './pages/auth/google';
+import Room from './pages/room/index';
 import NotFound from './pages/not-found';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="card" element={<Card />} />
           <Route path="auth" element={<Auth />} />
           <Route path="auth/google" element={<AuthGoogle />} />
+          <Route path="room" element={<Room />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
