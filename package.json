@@ -2,6 +2,7 @@
   "name": "dhsa-apps",
   "version": "0.1.0",
   "private": true,
+<<<<<<< HEAD
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -47,5 +48,19 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.8.1",
     "react-router-dom": "^6.4.5"
+=======
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "eslint": "8.37.0",
+    "eslint-config-next": "13.2.4",
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+>>>>>>> 907d382 (Initial commit from Create Next App)
   }
 }
