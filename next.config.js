@@ -11,6 +11,13 @@ const nextConfig = {
         basePath: false,
       },
       {
+        source: '/card/mobile',
+        destination:
+          'https://dhsa.ndhu.edu.tw/p/404-1110-206138.php?Lang=zh-tw',
+        permanent: false,
+        basePath: false,
+      },
+      {
         source: '/room',
         destination:
           'https://dhsa.ndhu.edu.tw/app/index.php?Plugin=school&Action=schoolresapp&Res=78',
